@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100svh;
+    background: linear-gradient(to right, rgba(300, 130, 20, 0.4), rgba(100, 129, 0, 0.4));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 50%;
+    aspect-ratio: 1/1;
+    background-color: rgb(247, 247, 247);
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.cardBox{
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen{
+    height: 15rem;
+    aspect-ratio: 1/1;
+    
+}
+
+.contents{
+    height: 15rem;
+    width: 30rem;
+}
