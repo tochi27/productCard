@@ -1,27 +1,23 @@
-document.title = "Product Card"
+document.title = "product cards";
 
-imagenEl = document.querySelector(".imagen");
-nameEl = document.querySelector("#name");
-descriptionEl = document.querySelector("#description");
-priceEl = document.querySelector("#price");
-imagingEl = document.querySelector("#imaging");
+const url = `http://fakestoreapi.com/products`;
+const containerEl = document.querySelector(".container");
 
-function getProduct() {
-    fetch(`https://fakestoreapi.com/products`
-    ).then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        console.log(data);
-
-        for (let i = 0; i < data.length; i++) {
-            let title = data[i].title;
-            let desc = data[i].description;
-            let pricer = data[i].price;
-            let imager = data[i].image;
-        }
-    });
-
-}
-
-getProduct();
+fetch(url)
+.then(response => response.json())
+.then(data => {
+    let display = ``;
+    for (let i = 0; i < data.length; i++) {
+        display += `
+        <div class= "cardBox">
+            <div>
+                <img src= "${data[i].image}">
+            </div>
+            <h3>${data[i].title}</h3>
+            <p><strong>Price:</strong> $${data[i].price}</p>
+            <p><strong>Category:</strong> ${data[i].category}</p>
+        </div> 
+        `
+    }
+    containerEl.innerHTML = display;
+})

@@ -6,39 +6,26 @@
 }
 
 body{
-    height: 100svh;
-    background: linear-gradient(to right, rgba(300, 130, 20, 0.4), rgba(100, 129, 0, 0.4));
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
 .container{
-    height: 50%;
-    aspect-ratio: 1/1;
-    background-color: rgb(247, 247, 247);
-    border-radius: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    height: 100%;
+    flex-wrap: wrap;
    
 }
 
 .cardBox{
-     display: flex;
-     flex-direction: column;
-     gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    margin: 0.3rem;
+    border-radius: 0.75rem;
+    padding: 0.3rem;
+    box-shadow: 0 0.2rem 0.5rem 0.3rem rgb(165, 164, 164);
 }
 
-.imagen{
-    height: 15rem;
-    aspect-ratio: 1/1;
-    
-}
-
-.contents{
-    height: 15rem;
-    width: 30rem;
-}
+img {
+    height: 10rem;
+    width: 10rem;
+  }
